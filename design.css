@@ -1,0 +1,263 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+/* font-family: "DM Serif Text", serif; */
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* Barre de Navigation */
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(24, 22, 22);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 2px 2px white;
+}
+
+
+header h2{
+    margin: 0 20px;
+    color: white;
+}
+
+
+header li{
+    list-style: none;
+    margin: 0 20px;
+}
+
+
+header li ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+header ul a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+
+header ul a:hover{
+    background-color: rgba(128, 128, 128, 0.516);
+    border-radius: 20px;
+}
+
+
+.menu{
+    display: none;
+    margin: 20px;
+}
+
+
+.menu i{
+    color: white;
+    font-size: 50px;
+}
+
+
+/* Section D'Acceuil */
+
+
+#acceuil{
+    background-color: rgb(24, 22, 22);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#acceuil .image-box{
+    margin: 30px 0 5px;
+    border-radius: 50%;
+}
+
+
+#acceuil .image-box img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+
+#acceuil .dec-box{
+    width: 90%;
+    margin: 5px 5%;
+    color: white;
+    text-align: center;
+}
+
+
+#acceuil .dec-box h2{
+    font-family: "DM Serif Text", serif;
+}
+
+
+#acceuil .dec-box p{
+    text-align: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.648);
+    font-weight: bold;
+}
+
+
+/* Section Bissness */
+
+
+#bissness{
+    width: 90%;
+    margin: 20px 5% 50px;
+}
+
+
+#bissness h2{
+    text-align: center;
+    padding: 15px;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-bottom: 4px double gray;
+    font-family: "DM Serif Text", serif;
+    color: blue;
+}
+
+
+#bissness .images-bissness{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+#bissness .images-bissness img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+#bissness .images-bissness img:hover{
+    box-shadow: 2px 2px 10px gray;
+}
+
+
+/* Mise en Place du footer */
+
+
+#footer{
+    background-color: rgb(24, 22, 22);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#footer .indication{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.list{
+    display: none;
+}
+
+
+
+
+/* Les Medias Queries */
+
+
+@media screen and (max-width:640px) {
+
+
+    .list-first{
+        display: none;
+    }
+
+    .list{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.84);
+        margin: 0;
+        display: none;
+    }
+    
+    
+    .list .list-ul{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .list-ul .link{
+        text-decoration: none;
+        color: white;
+        margin: 10px 0;
+        font-size: 18px;
+        text-align: center;
+        padding: 10px 25px;
+        background-color: inherit;
+        border: 3px solid  greenyellow;
+        border-bottom: 7px solid greenyellow;
+        border-radius: 20px;
+        width: 150px;
+        margin: 12px auto;
+        transition: 0.3s;
+    }
+
+
+    .list-ul .link:active{
+        border-bottom: 3px solid greenyellow;
+    }
+
+
+    .menu{
+        display: block;
+    }
+
+
+    #acceuil .dec-box p{
+        text-align: justify;
+    }
+}
